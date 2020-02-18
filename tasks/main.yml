@@ -41,3 +41,4 @@
     key: "{{ lookup('pipe', 'ssh-keyscan -p {{ hostvars[generate_ssh_keys_target_server].ansible_port }} {{ hostvars[generate_ssh_keys_target_server].ansible_host }},`dig +short {{ hostvars[generate_ssh_keys_target_server].ansible_host }}`') }}"
   become: true
   become_user: "{{ generate_ssh_keys_client_user }}"
+  when: generate_ssh_keys_update_known_hosts

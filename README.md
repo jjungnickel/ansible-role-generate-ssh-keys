@@ -25,6 +25,7 @@ generate_ssh_keys_client_user: "root" (user that you will be sshing from.  The p
 generate_ssh_keys_key_type: "ed25519" (can also choose "rsa")
 generate_ssh_keys_key_bits: 4096 (ignored for ed25519, but will be used for rsa key type)
 generate_ssh_keys_key_state: "present"
+generate_ssh_keys_update_known_hosts: True (scan ssh server's host key and add to client's known hosts)
 ```
 
 

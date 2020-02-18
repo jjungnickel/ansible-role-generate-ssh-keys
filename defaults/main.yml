@@ -7,3 +7,4 @@ generate_ssh_keys_key_type: "ed25519"
 generate_ssh_keys_target_server: "ssh-server.example.com"
 generate_ssh_keys_server_user: "root"
 generate_ssh_keys_key_state: "present"
+generate_ssh_keys_update_known_hosts: True
