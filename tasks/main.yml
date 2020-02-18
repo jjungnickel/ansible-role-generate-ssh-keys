@@ -31,10 +31,6 @@
   delegate_to: "{{ generate_ssh_keys_target_server }}"
   become: true
 
-- name: debug
-  debug:
-    msg: "{{ hostvars[generate_ssh_keys_target_server].ansible_host }} {{ hostvars[generate_ssh_keys_target_server].ansible_port }}"
-
 - name: Scan ssh server's host key and add to client's known hosts
   known_hosts:
     name: "[{{ hostvars[generate_ssh_keys_target_server].ansible_host }}]:{{ hostvars[generate_ssh_keys_target_server].ansible_port }}"
